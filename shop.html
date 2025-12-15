@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoEgo — Shop</title>
+  <meta name="description" content="Shop fictif NoEgo — merch et accessoires."/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="garland">
+    <div class="wire">
+      <span class="bulb red"   style="left:2%"></span>
+      <span class="bulb green" style="left:9%"></span>
+      <span class="bulb red"   style="left:16%"></span>
+      <span class="bulb green" style="left:23%"></span>
+      <span class="bulb red"   style="left:30%"></span>
+      <span class="bulb green" style="left:37%"></span>
+      <span class="bulb red"   style="left:44%"></span>
+      <span class="bulb green" style="left:51%"></span>
+      <span class="bulb red"   style="left:58%"></span>
+      <span class="bulb green" style="left:65%"></span>
+      <span class="bulb red"   style="left:72%"></span>
+      <span class="bulb green" style="left:79%"></span>
+      <span class="bulb red"   style="left:86%"></span>
+      <span class="bulb green" style="left:93%"></span>
+    </div>
+  </div>
+  <canvas id="snow"></canvas>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.jpg" alt="NoEgo Logo">
+        <div>
+          <div class="name">NoEgo</div>
+          <div class="small">Esports • H1Z1</div>
+        </div>
+      </a>
+      <nav class="links">
+        <a class="" href="index.html">Accueil</a>
+        <a class="" href="about.html">About</a>
+        <a class="active" href="shop.html">Shop</a>
+        <a class="" href="team.html">Team</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+  <section class="section">
+    <h2>Shop NoEgo</h2>
+    <p style="color:var(--muted); margin-top:0">
+      Boutique fictive (idéale pour un TFE). Panier en JS (sans paiement).
+    </p>
+
+    <div class="grid" id="products"></div>
+
+    <div class="card full" style="margin-top:14px;">
+      <div class="pad">
+        <strong>Panier</strong>
+        <p id="cartText">Ton panier est vide.</p>
+        <div class="small">Astuce: mentionne dans ton rapport que c’est un prototype (MVP).</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> NoEgo — Shop.
+  </footer>
+</main>
+
+<script src="js/snow.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const items = [
+    { name: "Hoodie NoEgo (Noir)", price: 59.99, desc:"Confort + style, parfait pour LAN et chill." },
+    { name: "Jersey NoEgo 2025", price: 74.99, desc:"Look pro, coupe sportive, team spirit." },
+    { name: "T-Shirt NoEgo", price: 29.99, desc:"Simple, efficace, logo en évidence." },
+    { name: "Casquette NoEgo", price: 24.99, desc:"Casual, réglable, branding discret." },
+    { name: "Tapis de souris XL", price: 34.99, desc:"Glisse propre, control stable, format desk." },
+    { name: "Sticker Pack NoEgo", price: 9.99, desc:"Pour PC, casque, téléphone, partout." }
+  ];
+
+  const grid = document.getElementById("products");
+  const cartText = document.getElementById("cartText");
+  const cart = [];
+
+  function render(){
+    grid.innerHTML = "";
+    items.forEach((p, idx) => {
+      const el = document.createElement("div");
+      el.className = "card product";
+      el.innerHTML = `
+        <div class="pad">
+          <strong>${p.name}</strong>
+          <p>${p.desc}</p>
+          <div class="price">${p.price.toFixed(2)} €</div>
+          <button class="btn" data-i="${idx}">Ajouter au panier</button>
+        </div>
+      `;
+      grid.appendChild(el);
+    });
+
+    document.querySelectorAll(".btn").forEach(b=>{
+      b.addEventListener("click", () => {
+        const i = Number(b.getAttribute("data-i"));
+        cart.push(items[i]);
+        const total = cart.reduce((s,x)=>s+x.price,0);
+        cartText.textContent = `Articles: ${cart.length} — Total: ${total.toFixed(2)} € (fictif)`;
+      });
+    });
+  }
+  render();
+</script>
+</body>
+</html>

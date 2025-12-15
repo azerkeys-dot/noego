@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoEgo — Accueil</title>
+  <meta name="description" content="NoEgo — équipe esports fictive H1Z1. To Inspire The Best Game In You."/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="garland">
+    <div class="wire">
+      <span class="bulb red"   style="left:2%"></span>
+      <span class="bulb green" style="left:9%"></span>
+      <span class="bulb red"   style="left:16%"></span>
+      <span class="bulb green" style="left:23%"></span>
+      <span class="bulb red"   style="left:30%"></span>
+      <span class="bulb green" style="left:37%"></span>
+      <span class="bulb red"   style="left:44%"></span>
+      <span class="bulb green" style="left:51%"></span>
+      <span class="bulb red"   style="left:58%"></span>
+      <span class="bulb green" style="left:65%"></span>
+      <span class="bulb red"   style="left:72%"></span>
+      <span class="bulb green" style="left:79%"></span>
+      <span class="bulb red"   style="left:86%"></span>
+      <span class="bulb green" style="left:93%"></span>
+    </div>
+  </div>
+  <canvas id="snow"></canvas>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.jpg" alt="NoEgo Logo">
+        <div>
+          <div class="name">NoEgo</div>
+          <div class="small">Esports • H1Z1</div>
+        </div>
+      </a>
+      <nav class="links">
+        <a class="active" href="index.html">Accueil</a>
+        <a class="" href="about.html">About</a>
+        <a class="" href="shop.html">Shop</a>
+        <a class="" href="team.html">Team</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+  <section class="hero">
+    <div class="heroGrid">
+      <div class="heroLeft">
+        <div class="pill">🎄 Special Noël • <span style="color:var(--muted)">neige + guirlande</span></div>
+        <h1 class="heroTitle" style="margin-top:12px;">NoEgo</h1>
+        <p class="heroSub">
+          Équipe esports fictive conçue pour ton TFE : identité premium, pages claires,
+          et un univers compétitif centré sur <strong>H1Z1</strong>.
+        </p>
+        <div class="slogan">To Inspire The Best Game In You</div>
+        <div class="heroMeta">
+          <span class="pill">Roster 5 • Scrims</span>
+          <span class="pill">Content • Highlights</span>
+          <span class="pill">Sponsors • Branding</span>
+        </div>
+      </div>
+
+      <div class="heroRight" aria-label="NoEgo banner">
+        <div class="heroRightInner">
+          <strong>Built for competition</strong>
+          <span>Rotations, teamplay, calls rapides et exécution en fight — le style NoEgo.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Dernières vidéos</h2>
+    <div class="grid">
+      <div class="card split">
+        <iframe class="video"
+          src="https://www.youtube.com/embed/Eaam93ZjDBo"
+          title="NoEgo video 1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div class="pad">
+          <strong>Highlights</strong>
+          <p>Les meilleurs moments pour montrer l’identité NoEgo : plays décisifs, discipline et clutch.</p>
+        </div>
+      </div>
+
+      <div class="card split">
+        <iframe class="video"
+          src="https://www.youtube.com/embed/p4w0YMkL9Jo"
+          title="NoEgo video 2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div class="pad">
+          <strong>Compétitif</strong>
+          <p>Gameplay orienté teamplay : prise d’info, décisions rapides et fights propres.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sponsors</h2>
+    <div class="sponsors">
+      <div class="sponsor">Abbly</div>
+      <div class="sponsor">Samsung</div>
+      <div class="sponsor">Redbull</div>
+      <div class="sponsor">Spotify</div>
+      <div class="sponsor">Mercedes</div>
+      <div class="sponsor">SteelSeries</div>
+      <div class="sponsor">Pulsar</div>
+      <div class="sponsor">Secretlab</div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> NoEgo — Site TFE (équipe fictive).
+  </footer>
+</main>
+
+<script src="js/snow.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

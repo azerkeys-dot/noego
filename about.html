@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoEgo — About</title>
+  <meta name="description" content="À propos de NoEgo: équipe esports fictive H1Z1, leadership et vision."/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="garland">
+    <div class="wire">
+      <span class="bulb red"   style="left:2%"></span>
+      <span class="bulb green" style="left:9%"></span>
+      <span class="bulb red"   style="left:16%"></span>
+      <span class="bulb green" style="left:23%"></span>
+      <span class="bulb red"   style="left:30%"></span>
+      <span class="bulb green" style="left:37%"></span>
+      <span class="bulb red"   style="left:44%"></span>
+      <span class="bulb green" style="left:51%"></span>
+      <span class="bulb red"   style="left:58%"></span>
+      <span class="bulb green" style="left:65%"></span>
+      <span class="bulb red"   style="left:72%"></span>
+      <span class="bulb green" style="left:79%"></span>
+      <span class="bulb red"   style="left:86%"></span>
+      <span class="bulb green" style="left:93%"></span>
+    </div>
+  </div>
+  <canvas id="snow"></canvas>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.jpg" alt="NoEgo Logo">
+        <div>
+          <div class="name">NoEgo</div>
+          <div class="small">Esports • H1Z1</div>
+        </div>
+      </a>
+      <nav class="links">
+        <a class="" href="index.html">Accueil</a>
+        <a class="active" href="about.html">About</a>
+        <a class="" href="shop.html">Shop</a>
+        <a class="" href="team.html">Team</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+  <section class="section">
+    <h2>ABOUT NoEgo</h2>
+    <div class="grid">
+      <div class="card full">
+        <div class="pad">
+          <p style="margin-top:0">
+            Rooted in our hunger for improvement and inspired by our passion for victory, we are <strong>NoEgo</strong>.
+          </p>
+          <p>
+            NoEgo est une équipe esports fictive centrée sur <strong>H1Z1</strong>.
+            Notre objectif est simple : performer sans ego, progresser plus vite, et gagner ensemble.
+          </p>
+          <p>
+            Nous construisons notre identité sur la discipline, l’analyse, et des calls clairs.
+            Chaque entraînement vise une exécution plus propre : rotations, lecture de zone, et timing des fights.
+          </p>
+          <div class="slogan">To Inspire The Best Game In You</div>
+        </div>
+      </div>
+
+      <div class="card split">
+        <div class="pad">
+          <strong>Notre mission</strong>
+          <p>
+            Inspirer les joueurs à sortir leur meilleure performance, que ce soit en ranked, en scrim ou en tournoi.
+            La progression passe par la rigueur, pas par l’ego.
+          </p>
+        </div>
+      </div>
+
+      <div class="card split">
+        <div class="pad">
+          <strong>Notre style</strong>
+          <p>
+            Agressif maîtrisé : prise d’info rapide, rotations propres, et exécution coordonnée.
+            On joue pour le résultat — pas pour les stats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>OUR LEADERSHIP</h2>
+    <div class="grid">
+      <div class="card full">
+        <div class="pad">
+          <strong>ZanK — CEO</strong>
+          <p>
+            ZanK dirige NoEgo : stratégie compétitive, organisation des scrims, et développement de la marque.
+            Il supervise également la création de contenu, la communication et l’identité visuelle de l’équipe.
+          </p>
+          <p>
+            Son focus : une équipe stable et performante sur H1Z1, portée par une culture “team first”,
+            une mentalité d’analyse, et des objectifs clairs.
+          </p>
+          <div class="role">
+            <span class="pill">Direction</span>
+            <span class="pill">Performance</span>
+            <span class="pill">Branding</span>
+            <span class="pill">Partenariats</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> NoEgo — About.
+  </footer>
+</main>
+
+<script src="js/snow.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
